@@ -8,7 +8,7 @@ function App() {
 
   function addItemHandler(item) {
     setItemsList((previtems) => {
-      return [item, ...previtems];
+      return [...previtems, item];
     });
   }
 
