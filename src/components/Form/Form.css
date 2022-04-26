@@ -1,0 +1,13 @@
+.form-items {
+  padding: 1rem;
+}
+.input-field {
+  height: 2rem;
+  width: 80%;
+}
+
+.main-submit {
+  height: 2rem;
+  width: 15%;
+  margin-left: 5%;
+}
