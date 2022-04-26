@@ -12,7 +12,7 @@ function App() {
     });
   }
 
-  function resetHandler(event) {
+  function resetHandler() {
     setItemsList([]);
   }
 
