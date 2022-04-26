@@ -1,15 +1,12 @@
 import React from "react";
 import "./ListItems.css";
 
-function ListItems() {
+function ListItems(props) {
   return (
     <div className="listitem-container">
-      <div className="listitem">List Item 1</div>
-      <div className="listitem">List Item 2</div>
-      <div className="listitem">List Item 3</div>
-      <div className="listitem">List Item 4</div>
-      <div className="listitem">List Item 5</div>
-      <div className="listitem">List Item 6</div>
+      {props.allItems.map((item) => (
+        <div className="listitem" key={item.id}>{item.content}</div>
+      ))}
     </div>
   );
 }
