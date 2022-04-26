@@ -10,13 +10,16 @@ function App() {
     setItemsList((previtems) => {
       return [item, ...previtems];
     });
-    console.log(itemsList)
+  }
+
+  function resetHandler(event) {
+    setItemsList([]);
   }
 
   return (
     <div className="main-body">
       <div className="main-container">
-        <Form onSubmit={addItemHandler} />
+        <Form onSubmit={addItemHandler} onReset={resetHandler} />
         <List items={itemsList} />
       </div>
     </div>

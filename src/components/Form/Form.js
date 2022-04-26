@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Form.css";
 
 function Form(props) {
-  const [enteredInput, setEnteredInput] = useState()
+  const [enteredInput, setEnteredInput] = useState();
 
   function inputHandler(event) {
     setEnteredInput(event.target.value);
@@ -13,9 +13,14 @@ function Form(props) {
 
     const itemData = {
       content: enteredInput,
-      id: Math.random().toString()
-    }
-    props.onSubmit(itemData)
+      id: Math.random().toString(),
+    };
+    props.onSubmit(itemData);
+    setEnteredInput("")
+  }
+
+  function resetHandler(event) {
+    props.onReset(true);
   }
 
   return (
@@ -29,10 +34,14 @@ function Form(props) {
           className="input-field"
           type="text"
           max="50"
+          value={enteredInput}
           onChange={inputHandler}
         ></input>
         <button className="main-submit" type="submit">
-          Submit
+          Add
+        </button>
+        <button className="main-cancel" type="button" onClick={resetHandler}>
+          Reset
         </button>
       </form>
     </div>
