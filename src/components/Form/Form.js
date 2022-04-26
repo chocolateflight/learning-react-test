@@ -19,7 +19,7 @@ function Form(props) {
     setEnteredInput("")
   }
 
-  function resetHandler(event) {
+  function resetHandler() {
     props.onReset(true);
   }
 
